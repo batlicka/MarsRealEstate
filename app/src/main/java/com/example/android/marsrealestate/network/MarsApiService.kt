@@ -42,10 +42,12 @@ private val retrofit = Retrofit.Builder()
  */
 interface MarsApiService {
     @GET("realestate")
-
     //creates a Call object,That Call object is used to start the request.
-    fun getProperties():
-            Call<List<MarsProperty>>
+    //fun getProperties():
+    //        Call<List<MarsProperty>>
+
+    suspend fun getProperties():
+            List<MarsProperty>
 }
 
 /**
